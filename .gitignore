@@ -11,3 +11,4 @@ CTAGS
 .idea
 .env
 .git
+__pycache__
