@@ -1,15 +1,18 @@
-# code-sample-description
-This sample repo will show you how to easily do X with Nylas.
+# Shiny-for-Python-Building-an-Email-Dashboard
+
+This sample will show you to create an email dashboard using Shiny for Python.
+
+You can follow along step-by-step in our blog post ["Shiny for Python: Building an Email Dashboard"](https://www.nylas.com/blog/shiny-for-python-building-an-email-dashboard/).
 
 ## Setup
 
 ### System dependencies
 
-- Add System dependencies
+- Python v3.x
 
 ### Gather environment variables
 
-You'll need the following values from the Nylas Dashboard:
+You'll need the following values:
 
 ```text
 ACCESS_TOKEN = ""
@@ -17,29 +20,41 @@ CLIENT_ID = ""
 CLIENT_SECRET = ""
 ```
 
-Add the above values to a `.env` file.
+Add the above values to a new `.env` file:
 
-The `.env` file is added to `.gitignore`. Ensure to store these values securely.
+```bash
+$ touch .env # Then add your env variables
+```
 
 ### Install dependencies
 
-[replace with install steps]
 ```bash
-$ npm i
+$ pip3 install nylas # Nylas API SDK
+$ pip3 install shiny # Shiny for Python
+$ pip3 install seaborn # Python data visualization library
+$ pip3 install pandas # Data analysis library
+$ pip3 install wordcloud # Wordcloud generator
+$ pip3 install matplotlib # library for creating static, animated, and interactive visualizations
 ```
 
 ## Usage
 
-The recommended way to use this sample is ...
+Create the application using the following command:
 
-You can also clone the repository ...
+```bash
+$ shiny create mail_dashboard
+```
 
-You'll find more detailed instructions ...
+And modify the contents of app.py
 
-## Get support
+Run the script using the `shiny run` command:
 
-If you found a bug or want to suggest a new [feature/use case/sample], please file an issue.
+```bash
+$ shiny run --reload mail_dashboard/app.py
+```
+
+The dashboard should run on your browser on port 8000.
 
 ## Learn more
 
-Visit our [Nylas documentation](https://developer.nylas.com/) to learn more.
+Visit our [Nylas Python SDK documentation](https://developer.nylas.com/docs/developer-tools/sdk/python-sdk/) to learn more.
